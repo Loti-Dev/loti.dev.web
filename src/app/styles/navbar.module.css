@@ -1,9 +1,16 @@
 .navbar {
+    top: 0;
+
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 2% 25%;
+    padding: 0.9% 25%;
+    margin-bottom: 2em;
+
+    z-index: 999;
 }
 
 .navbar-left a {
@@ -11,6 +18,10 @@
     align-items: center;
 
     gap: 1em;
+}
+
+.navbar-left img {
+    border-radius: 100%;
 }
 
 .navbar-left a span {
@@ -47,6 +58,10 @@
     font-weight: 600;
     color: #ffffffcc;
     padding: 0.5em 1em;
+}
+
+.navbar-selected {
+    border-bottom: 1px solid var(--grief-text-secondary);
 }
 
 .navbar-premium {

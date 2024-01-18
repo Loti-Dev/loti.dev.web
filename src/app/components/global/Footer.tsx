@@ -1,7 +1,7 @@
 import styles from "../../styles/footer.module.css"
 import Image from "next/image"
 import Link from "next/link"
-import Loti from "../../../../public/loti-pfp.png"
+import Loti from "../../../../public/grief.webp"
 
 const Footer = () => {
     return (
@@ -10,11 +10,11 @@ const Footer = () => {
                 <div className={styles["footer-left"]}>
                     <Link href="/">
                         <Image src={Loti} width="50" height="50" alt="logo" />
-                        <span>Loti</span>
+                        <span>Grief</span>
                     </Link>
                     <div className={styles["footer-description"]}>
                         <span>
-                            Loti is a versatile bot, offering features like moderation, social
+                            Grief is a versatile bot, offering features like moderation, social
                             commands, and much more, making it perfect for all your server needs.
                         </span>
                     </div>
@@ -33,8 +33,8 @@ const Footer = () => {
                     <div className={styles["footer-option"]}>
                         <span className={"title"}>Other Links</span>
                         <div className={styles["footer-links"]}>
-                            <Link href="https://twitter.com/TryLoti">X (Formerly Twitter)</Link>
-                            <Link href="https://discord.gg/invite/loti">Discord</Link>
+                            <Link href="https://twitter.com/envincement">X (Formerly Twitter)</Link>
+                            <Link href="https://discord.gg/invite/seer">Discord</Link>
                             <Link href="#">Top.gg</Link>
                         </div>
                     </div>

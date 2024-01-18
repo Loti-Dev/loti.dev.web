@@ -19,9 +19,9 @@ export default function Home() {
                 <div className={styles["main-new"]}>
                     <p>New: Bot Re-Written in TypeScript</p>
                 </div>
-                <h1 className={styles["title"]}>Loti, A Multi-Purpose Bot.</h1>
+                <h1 className={styles["title"]}>Grief, A Multi-Purpose Bot.</h1>
                 <p className={styles["description"]}>
-                    Loti is a versatile bot, offering features like moderation, social commands, and
+                    Grief is a versatile bot, offering features like moderation, social commands, and
                     much more, making it perfect for all your server needs.
                 </p>
                 <div className={styles["buttons"]}>
