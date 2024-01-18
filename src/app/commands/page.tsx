@@ -55,7 +55,6 @@ export default function Refund() {
                             </div>
                             <ExpandMoreIcon width="20px" height="20px" />
                         </div>
-                        {command.showContent && (
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -80,7 +79,6 @@ export default function Refund() {
                                     </div>
                                 </div>
                             </motion.div>
-                        )}
                     </div>
                 ))}
             </div>

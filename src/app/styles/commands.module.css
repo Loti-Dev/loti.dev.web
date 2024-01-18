@@ -5,9 +5,8 @@
     justify-content: center;
     align-items: center;
 
+    padding: 1.5rem;
     gap: 1em;
-
-    padding-bottom: 5em;
 }
 
 .title {
@@ -18,8 +17,10 @@
 .commands {
     display: grid;
 
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2em;
+
+    max-width: 70rem;
 }
 
 .command {
@@ -31,12 +32,10 @@
 
     border: solid 1px rgba(255, 255, 255, 0.116);
     border-radius: 12px;
-
-    width: 100em;
 }
 
 .command-details {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
 
     justify-content: center;
@@ -50,7 +49,7 @@
 }
 
 .command-details-inner {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
 }
 
@@ -60,8 +59,8 @@
 
     justify-content: space-between;
     align-items: center;
-    height: 5.4em;
-    padding: 0.8em 1.5em;
+    height: 7em;
+    padding: 2em 2em;
 }
 
 .command-top-content:hover {
@@ -70,14 +69,15 @@
 
 .command-content-bottom {
     display: flex;
-    flex-direction: row;
-    gap: 5em;
+    flex-direction: column;
+    gap: 2em;
 
     padding: 1em 1.5em;
 }
 
 .command-section-outer {
     display: flex;
+    flex-direction: column;
     gap: 1em;
 }
 
