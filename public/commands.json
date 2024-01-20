@@ -1,306 +1,228 @@
 [
   {
-    "name": "boosters",
-    "category": "util",
-    "description": "Get information about server boosters.",
+    "name": "nick",
+    "arguments": ["member", "nickname"],
+    "category": "mod",
+    "description": "Change a member's server nickname.",
+    "permission": "manage nicknames"
+  },
+    {
+    "name": "userinfo",
+    "arguments": ["member"],
+    "aliases": "ui",
+    "category": "mod",
+    "description": "Show information about a member.",
     "permission": "none"
   },
-  {
-    "name": "cat",
-    "aliases": [
-      "cat"
-    ],
-    "description": "Get a random cat image mrrp",
-    "category": "misc",
-    "permission": "none"
+    {
+    "name": "kick",
+    "arguments": ["member", "reason"],
+    "category": "mod",
+    "description": "Kick a user.",
+    "permission": "kick members"
   },
-  {
-    "name": "roll",
-    "category": "Misc",
-    "description": "Roll a dice",
-    "permission": "none"
-  },
-  {
-    "name": "emojis",
-    "category": "util",
-    "description": "Send emojis of the guild as a zip file.",
-    "permission": "Administrator"
-  },
-  {
-    "name": "coinflip",
-    "category": "misc",
-    "description": "Flip a coin and get heads or tails.",
-    "permission": "none"
-  },
-  {
-    "name": "gayrate",
-    "aliases": [
-      "gayrating",
-      "howgay",
-      "gay"
-    ],
-    "category": "misc",
-    "description": "Rate the gayness of a member.",
-    "permission": "none"
-  },
-  {
-    "name": "emojilist",
-    "category": "util",
-    "description": "List all emojis available on the server.",
-    "permission": "none"
-  },
-  {
-    "name": "lookupmc",
-    "category": "games",
-    "description": "Get Minecraft profile information",
-    "permission": "none"
-  },
-  {
-    "name": "newest",
-    "category": "util",
-    "description": "Get the newest account in the server.",
-    "permission": "none"
-  },
-  {
-    "name": "oldest",
-    "category": "util",
-    "description": "Get the oldest account in the server.",
-    "permission": "none"
-  },
-  {
-    "name": "shorten",
-    "category": "util",
-    "description": "Shorten a URL and check for malicious content",
-    "permission": "none"
-  },
-  {
-    "name": "slap",
-    "description": "Slap someone!",
-    "category": "fun",
-    "permission": "none"
-  },
-  {
-    "name": "spotify",
-    "description": "Search for spotify songs",
-    "aliases": [
-      "sp",
-      "song"
-    ],
-    "permission": "none"
-  },
-  {
-    "name": "test",
-    "aliases": [
-      "shards",
-      "shard",
-      "status"
-    ],
-    "permission": "none"
-  },
-  {
-    "name": "uwuify",
-    "description": "meow",
-    "category": "misc",
-    "permission": "none"
-  },
-  {
-    "name": "antinuke",
-    "help": true,
-    "aliases": [
-      "an"
-    ],
-    "syntax": "(subcommand) <args>",
-    "example": "kick on --do ban --threshold 1",
-    "description": "Antinuke protects your server from malicious actors",
-    "permission": "Administrator"
-  },
-  {
+    {
     "name": "ban",
-    "help": true,
-    "category": "Moderation",
-    "aliases": [
-      "ban",
-      "deport",
-      "banish"
-    ],
-    "syntax": "(user) <reason>",
-    "example": "notbruce_. Sending Hentai in #chat",
-    "permission": "BanMembers",
-    "description": "Bans a specified user from the server, with an optional reason."
+    "arguments": ["member", "reason"],
+    "aliases": "b",
+    "category": "mod",
+    "description": "Ban a user.",
+    "permission": "ban members"
+  },
+    {
+    "name": "massban",
+    "arguments": ["members", "days", "reason"],
+    "aliases": "mb",
+    "category": "mod",
+    "description": "Mass bans users from the server.",
+    "permission": "ban members"
   },
   {
-    "name": "timeout",
-    "help": true,
-    "aliases": [
-      "mute"
-    ],
-    "syntax": "(user) (time) <reason>",
-    "example": "notbruce_. 1h being a meanie :c",
-    "description": "Timeout a user",
-    "category": "Moderation",
-    "permission": "MuteMembers"
+    "name": "tempban",
+    "arguments": ["member", "duration", "reason"],
+    "aliases": "tb",
+    "category": "mod",
+    "description": "Temporarily ban users from the server.",
+    "permission": "ban members"
   },
   {
-    "name": "nuke",
-    "aliases": [
-      "kaboom",
-      "boom",
-      "nuke"
-    ],
-    "permission": "ManageChannels",
-    "description": "Deletes and clones the channel",
-    "category": "Moderation"
+    "name": "softban",
+    "arguments": ["member", "reason"],
+    "aliases": "sbb",
+    "category": "mod",
+    "description": "Kick a user and delete 1 days worth of their messages.",
+    "permission": "ban members"
   },
   {
-    "name": "purge",
-    "help": true,
-    "aliases": [
-      "clear"
-    ],
-    "permission": "ManageMessages",
-    "syntax": "(amount)",
-    "example": "100",
-    "category": "Moderation",
-    "description": "Purge a specified number of messages from the channel"
+    "name": "voicekick",
+    "arguments": ["member", "reason"],
+    "aliases": "vk",
+    "category": "mod",
+    "description": "Kick a member from a voice channel.",
+    "permission": "move members"
   },
   {
-    "name": "role",
-    "help": true,
-    "aliases": [
-      "r"
-    ],
-    "syntax": "(subcommand) <args>",
-    "example": "add notbruce_. Staff",
-    "description": "Moderate server roles",
-    "permission": "ManageRoles"
+    "name": "voiceunban",
+    "arguments": ["member", "reason"],
+    "aliases": "vu",
+    "category": "mod",
+    "description": "Unban a user from speaking and listening in the server's voice channels.",
+    "permission": "move members"
   },
   {
-    "name": "selfpurge",
-    "aliases": [
-      "selfclear"
-    ],
-    "category": "Moderation",
-    "description": "Purge a specified number of your messages from the channel",
-    "permission": "none"
-  },
-  {
-    "name": "sticker",
-    "help": true,
-    "syntax": "(subcommand) <args>",
-    "example": "steal",
-    "description": "Modify, Steal or Add Stickers to your server",
-    "permission": "ManageGuild"
+    "name": "voiceban",
+    "arguments": ["member", "reason"],
+    "aliases": "vb",
+    "category": "mod",
+    "description": "Ban a user from speaking and listening in the server's voice channels.",
+    "permission": "move members"
   },
   {
     "name": "unban",
-    "help": true,
-    "category": "Moderation",
-    "syntax": "(user)",
-    "example": "notbruce_.",
-    "aliases": [
-      "pardon",
-      "forgive"
-    ],
-    "permission": "BanMembers",
-    "description": "Unbans a user from the server."
+    "arguments": ["member", "reason"],
+    "aliases": "ub",
+    "category": "mod",
+    "description": "Unban a user from this server.",
+    "permission": "ban members"
+  },
+  {
+    "name": "naughty",
+    "category": "mod",
+    "description": "Make a channel NSFW for 30 seconds.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "clearinvites",
+    "category": "mod",
+    "description": "Delete all invites in the server.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "massunban",
+    "category": "mod",
+    "description": "Mass unban everyone.",
+    "permission": "ban members"
+  },
+  {
+    "name": "nuke",
+    "category": "mod",
+    "description": "Nuke the channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "slowmode",
+    "arguments": ["interval"],
+    "category": "mod",
+    "description": "Changes thread's or text channel's slowmode setting.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "timeout",
+    "arguments": ["member", "time", "reason"],
+    "aliases": "t",
+    "category": "mod",
+    "description": "Timeout users.",
+    "permission": "moderate members"
   },
   {
     "name": "untimeout",
-    "help": true,
-    "aliases": [
-      "unmute"
-    ],
-    "permission": "ModerateMembers",
-    "syntax": "(user)",
-    "example": "notbruce_.",
-    "description": "Timeout the user",
-    "category": "Misc"
+    "arguments": ["member", "reason"],
+    "aliases": "ut",
+    "category": "mod",
+    "description": "Untimeout users.",
+    "permission": "moderate members"
   },
   {
-    "name": "voicemaster",
-    "help": true,
-    "aliases": [
-      "vm"
-    ],
-    "syntax": "(subcommand) <args>",
-    "example": "name God.exe",
-    "description": "Make and Control Temporary Voice Channels",
-    "permission": "Administrator"
+    "name": "poll",
+    "arguments": ["channel"],
+    "category": "mod",
+    "description": "Start a poll.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "vanity channel",
+    "arguments": ["channel"],
+    "aliases": "",
+    "category": "vanity",
+    "description": "Setup the vanity log channel.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "vanity role",
+    "arguments": ["role"],
+    "aliases": "",
+    "category": "vanity",
+    "description": "Setup the vanity role.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "vanity toggle true",
+    "arguments": ["invite", "code"],
+    "aliases": "",
+    "category": "vanity",
+    "description": "Setup the vanity module. Do not use a slash.",
+    "permission": "manage guild"
   },
   {
     "name": "avatar",
-    "help": true,
-    "aliases": [
-      "av"
-    ],
-    "syntax": "(user)",
-    "example": "notbruce_.",
-    "description": "Fetch users avatar",
-    "permission": "none"
+    "arguments": ["member"],
+    "aliases": "",
+    "category": "info",
+    "description": "Fetch a users avatar."
   },
   {
-    "name": "getbanner",
-    "help": true,
-    "aliases": [
-      "banner"
-    ],
-    "syntax": "(user)",
-    "example": "notbruce_.",
-    "description": "Fetch user's banner",
-    "permission": "none"
+    "name": "banner",
+    "arguments": ["member"],
+    "aliases": "",
+    "category": "info",
+    "description": "Fetch a users banner."
   },
   {
-    "name": "createembed",
-    "help": true,
-    "aliases": [
-      "ce"
-    ],
-    "syntax": "<args>",
-    "example": "$v{title: Embed}$v{description: Embed Desc}",
-    "permission": "Administrator",
-    "description": "Create Embed Messages"
+    "name": "bans",
+    "aliases": "",
+    "category": "info",
+    "description": "Fetch a servers banlist.",
+    "permission": "ban members"
   },
   {
-    "name": "eval",
-    "aliases": [
-      "e"
-    ],
-    "permission": "none"
+    "name": "channels",
+    "aliases": "",
+    "category": "info",
+    "description": "Displays the servers channel list.",
+    "permission": "manage channels"
   },
   {
-    "name": "help",
-    "aliases": [
-      "h"
-    ],
-    "permission": "none"
+    "name": "channelperms",
+    "aliases": "",
+    "category": "info",
+    "description": "Displays the servers channel permissions.",
+    "permission": "manage channels"
   },
   {
-    "name": "ping",
-    "permission": "none"
+    "name": "devices",
+    "arguments": ["member"],
+    "aliases": "",
+    "category": "info",
+    "description": "Displays the devices a user is using."
   },
   {
-    "name": "prefix",
-    "help": true,
-    "aliases": [
-      "p"
-    ],
-    "syntax": "(prefix)",
-    "example": ";",
-    "description": "Guild Prefix",
-    "permission": "Administrator"
+    "name": "emojiinfo",
+    "arguments": ["emoji"],
+    "aliases": "",
+    "category": "info",
+    "description": "Displays information about an emoji."
   },
   {
-    "name": "reskin",
-    "permission": "none"
+    "name": "firstmessage",
+    "arguments": ["channel"],
+    "aliases": "",
+    "category": "info",
+    "description": "Fetches the first message in the channel."
   },
   {
-    "name": "serverinfo",
-    "aliases": [
-      "serverinfo",
-      "server",
-      "si"
-    ],
-    "category": "Misc",
-    "permission": "none"
+    "name": "guildemojis",
+    "aliases": "",
+    "category": "info",
+    "description": "Fetches the emojis in the specified server.."
   }
 ]

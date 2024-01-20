@@ -21,8 +21,8 @@ export default function Home() {
                 </div>
                 <h1 className={styles["title"]}>Grief, A Multi-Purpose Bot.</h1>
                 <p className={styles["description"]}>
-                    Grief is a versatile bot, offering features like moderation, social commands, and
-                    much more, making it perfect for all your server needs.
+                    Grief is a versatile bot, offering features like moderation, social commands,
+                    and much more, making it perfect for all your server needs.
                 </p>
                 <div className={styles["buttons"]}>
                     <a href="https://discord.gg/invite/loti" className={styles["add"]}>

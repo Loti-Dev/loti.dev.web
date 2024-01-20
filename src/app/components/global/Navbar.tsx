@@ -6,7 +6,7 @@ import Link from "next/link"
 import Loti from "../../../../public/grief.webp"
 import { signIn, useSession } from "next-auth/react"
 import { signOut } from "next-auth/react"
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation"
 
 const Navbar = () => {
     const { data: session } = useSession()
@@ -16,7 +16,7 @@ const Navbar = () => {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-                setDropdownOpen(!isDropdownOpen) 
+                setDropdownOpen(!isDropdownOpen)
             }
         }
 
@@ -25,7 +25,7 @@ const Navbar = () => {
         return () => {
             document.removeEventListener("click", handleClickOutside)
         }
-    }, [isDropdownOpen]) 
+    }, [isDropdownOpen])
 
     const handleDropdownClick = () => {
         if (session) {
@@ -33,7 +33,7 @@ const Navbar = () => {
         }
     }
 
-    const isCommandsPage  = pathname === "/commands"
+    const isCommandsPage = pathname === "/commands"
 
     return (
         <>
@@ -45,7 +45,10 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className={styles["navbar-center"]}>
-                    <div className={`${styles["navbar-link"]} ${isCommandsPage ? styles["navbar-selected"] : ""}`}>
+                    <div
+                        className={`${styles["navbar-link"]} ${
+                            isCommandsPage ? styles["navbar-selected"] : ""
+                        }`}>
                         <Link href="/commands">Commands</Link>
                     </div>
                     <div className={styles["navbar-link"]}>
