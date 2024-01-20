@@ -1,11 +1,13 @@
 "use client"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import styles from "../styles/commands.module.css"
 import commandsData from "../../../public/commands.json"
 import ContentCopyIcon from "@mui/icons-material/ContentCopy"
 import TerminalIcon from "@mui/icons-material/Terminal"
 import SearchIcon from "@mui/icons-material/Search"
 import { motion } from "framer-motion"
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function Commands() {
     const [commandsList, setCommandsList] = useState(
@@ -43,6 +45,42 @@ export default function Commands() {
             ? commandsList
             : commandsList.filter(command => command.category === selectedCategory)
 
+    const categoryListRef = useRef<HTMLDivElement>(null); // Create a ref for the commands list div
+    const scrollLeftButton = () => {
+        if (categoryListRef.current) {
+            categoryListRef.current.scrollLeft -= 100; // Adjust the scroll amount as needed
+        }
+    };
+    
+    const scrollRightButton = () => {
+        if (categoryListRef.current) {
+            categoryListRef.current.scrollLeft += 100; // Adjust the scroll amount as needed
+        }
+    };
+
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+        setIsDragging(true);
+        setStartX(event.clientX - categoryListRef.current!.offsetLeft);
+        setScrollLeft(categoryListRef.current!.scrollLeft);
+    };
+
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+        if (!isDragging) return;
+        event.preventDefault();
+        const x = event.clientX - categoryListRef.current!.offsetLeft;
+        const scrollX = x - startX;
+        categoryListRef.current!.scrollLeft = scrollLeft - scrollX;
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+    
+
     return (
         <section className={styles["content"]}>
             <div className={styles["top-section"]}>
@@ -58,31 +96,18 @@ export default function Commands() {
                     </div>
                 </div>
             </div>
-            <div className={styles["categories"]}>
-                <button
-                    className={
-                        selectedCategory === "All"
-                            ? styles["category-button-selected"]
-                            : styles["category-button"]
-                    }
-                    onClick={() => filterCommandsByCategory("All")}>
-                    All
-                </button>
-                {categories.map((category, index) => (
-                    <>
-                        <button
-                            key={index}
-                            className={
-                                selectedCategory === category
-                                    ? styles["category-button-selected"]
-                                    : styles["category-button"]
-                            }
-                            onClick={() => filterCommandsByCategory(category)}>
-                            {category?.charAt(0).toUpperCase() + category?.slice(1)} (
-                            {commandsList.filter(command => command.category === category).length})
-                        </button>
-                    </>
-                ))}
+            
+            <div className={styles["categories"]} ref={categoryListRef} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}>
+                <div className={styles['category-items']}>
+                    <li className={`${styles["category-button"]} ${selectedCategory === "All" ? styles["category-button-selected"] : ""}`} onClick={() => filterCommandsByCategory("All")}>
+                        All
+                    </li>
+                    {categories.map((category, index) => (
+                        <li key={index} className={`${styles["category-button"]} ${selectedCategory === category ? styles["category-button-selected"] : ""}`} onClick={() => filterCommandsByCategory(category)}>
+                            {category?.charAt(0).toUpperCase() + category?.slice(1)}
+                        </li>
+                    ))}
+                </div>
             </div>
 
             <div className={styles["commands"]}>
@@ -114,21 +139,18 @@ export default function Commands() {
                             <div className={styles["command-section-outer"]}>
                                 <span className={styles["command-section-title"]}>arguments</span>
                                 <div className={styles["command-section"]}>
-                                    {command.arguments && command.arguments?.length > 0 ? (
-                                        command.arguments?.map((argument: String, index) => (
-                                            <span
-                                                key={index}
-                                                className={styles["command-section-element"]}>
-                                                {argument}
+                                {(command.arguments && command.arguments?.length > 0)  ? (
+                                            command.arguments?.map((argument: String, index) => (
+                                                <span key={index} className={styles["command-section-element"]}>
+                                                    {argument}
+                                                </span>
+                                            ))
+                                        ) : (
+                                            <span key={index} className={styles["command-section-element"]}>
+                                                none
                                             </span>
-                                        ))
-                                    ) : (
-                                        <span
-                                            key={index}
-                                            className={styles["command-section-element"]}>
-                                            none
-                                        </span>
-                                    )}
+                                        )
+                                        }
                                 </div>
                             </div>
                             <div className={styles["command-section-outer"]}>

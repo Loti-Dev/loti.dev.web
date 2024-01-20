@@ -80,6 +80,9 @@
 
     border: solid 1px var(--grief-border-color);
     border-radius: 1.5rem;
+
+    width: 21em;
+    max-width: 100%;
 }
 
 .command-details {
@@ -191,25 +194,76 @@
     border: 1px solid var(--grief-background-secondary-light);
 
     border-radius: 1rem;
-
     overflow: hidden;
 }
 
-.category-button {
-    width: 100vh;
+.categories li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    align-items: center;
+
+    width: 20vh;
+    font-weight: 600;
+    font-size: 15px;
+
+    color: var(--grief-text-secondary);
+
+    border-right: 1px solid var(--grief-background-secondary-light);
+
+    overflow: hidden;
+    position: relative;
 }
+
+.category-items {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+}
+
+.category-button:hover {
+    cursor: pointer;
+}
+
 .category-button-selected {
-    width: 100vh;
+    color: var(--grief-text-primary);
     background-color: var(--grief-background-secondary-light);
 }
 
+.scroll-button {
+    position: absolute;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.363) 100%);
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+
+    height: 100%;
+}
+
+.scroll-button-left {
+    left: 0;
+}
+
+.scroll-button-right {
+    right: 0;
+}
+
 @media screen and (max-width: 1100px) {
+    .command {
+        width: 40vh;
+    }
     .commands {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 750px) {
+    .command {
+        width: 45vh;
+    }
+
     .commands {
         grid-template-columns: repeat(1, 1fr);
     }
