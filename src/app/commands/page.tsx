@@ -114,9 +114,21 @@ export default function Commands() {
                             <div className={styles["command-section-outer"]}>
                                 <span className={styles["command-section-title"]}>arguments</span>
                                 <div className={styles["command-section"]}>
-                                    <span className={styles["command-section-element"]}>
-                                        {command.arguments ? command.arguments : "none"}
-                                    </span>
+                                    {command.arguments && command.arguments?.length > 0 ? (
+                                        command.arguments?.map((argument: String, index) => (
+                                            <span
+                                                key={index}
+                                                className={styles["command-section-element"]}>
+                                                {argument}
+                                            </span>
+                                        ))
+                                    ) : (
+                                        <span
+                                            key={index}
+                                            className={styles["command-section-element"]}>
+                                            none
+                                        </span>
+                                    )}
                                 </div>
                             </div>
                             <div className={styles["command-section-outer"]}>

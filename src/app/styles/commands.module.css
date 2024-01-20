@@ -126,6 +126,12 @@
     padding: 1em 1.5em;
 }
 
+.command-section {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
 .command-section-outer {
     display: flex;
     flex-direction: column;
