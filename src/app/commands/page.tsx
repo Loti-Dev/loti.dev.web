@@ -63,11 +63,12 @@ export default function Commands() {
     const [scrollLeft, setScrollLeft] = useState(0);
 
     const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+        if (event.button !== 0) return;
+        event.preventDefault();
         setIsDragging(true);
         setStartX(event.clientX - categoryListRef.current!.offsetLeft);
         setScrollLeft(categoryListRef.current!.scrollLeft);
     };
-
     const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         if (!isDragging) return;
         event.preventDefault();
@@ -79,7 +80,24 @@ export default function Commands() {
     const handleMouseUp = () => {
         setIsDragging(false);
     };
-    
+
+    const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+        setIsDragging(true);
+        setStartX(event.touches[0].clientX - categoryListRef.current!.offsetLeft);
+        setScrollLeft(categoryListRef.current!.scrollLeft);
+    };
+
+    const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+        if (!isDragging) return;
+        event.preventDefault();
+        const x = event.touches[0].clientX - categoryListRef.current!.offsetLeft;
+        const scrollX = x - startX;
+        categoryListRef.current!.scrollLeft = scrollLeft - scrollX;
+    };
+
+    const handleTouchEnd = () => {
+        setIsDragging(false);
+    };
 
     return (
         <section className={styles["content"]}>
@@ -97,7 +115,17 @@ export default function Commands() {
                 </div>
             </div>
             
-            <div className={styles["categories"]} ref={categoryListRef} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}>
+            <div
+                className={styles["categories"]}
+                ref={categoryListRef}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                onMouseLeave={handleMouseUp}
+            >
                 <div className={styles['category-items']}>
                     <li className={`${styles["category-button"]} ${selectedCategory === "All" ? styles["category-button-selected"] : ""}`} onClick={() => filterCommandsByCategory("All")}>
                         All

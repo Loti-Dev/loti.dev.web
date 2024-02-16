@@ -1,10 +1,338 @@
 [
   {
+    "name": "stfu",
+    "arguments": ["member"],
+    "category": "featured",
+    "description": "Automatically deletes a users messages.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "uwulock",
+    "arguments": ["member"],
+    "category": "featured",
+    "description": "Force a user to talk in uwu.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "selfpurge",
+    "arguments": ["number"],
+    "category": "featured",
+    "description": "Purge all your messages from chat."
+  },
+  {
+    "name": "permissions addserverrule",
+    "arguments": ["allow/deny", "cmd", "who/what"],
+    "category": "grief",
+    "description": "Add a rule to a command in this server.",
+    "permission": "administrator"
+  },
+  {
+    "name": "retrigger",
+    "category": "grief",
+    "description": "Setup automatic triggers based on regular expressions."
+  },
+  {
+    "name": "permissions canrun",
+    "arguments": ["user"],
+    "category": "grief",
+    "description": "Check if a user can run a command.",
+    "permission": "administrator"
+  },
+  {
+    "name": "permissions clearserverrules",
+    "category": "grief",
+    "description": "Clear all rules created in the server.",
+    "permission": "administrator"
+  },
+  {
+    "name": "permissions explain",
+    "arguments": ["user"],
+    "category": "grief",
+    "description": "Explain how permissions work.",
+    "permission": "administrator"
+  },
+  {
+    "name": "permissions removeserverrule",
+    "arguments": ["command", "who/what"],
+    "category": "grief",
+    "description": "Remove a server rule.",
+    "permission": "administrator"
+  },
+  {
+    "name": "set serverprefix",
+    "arguments": ["prefixes"],
+    "category": "grief",
+    "description": "Set a custom prefix for grief.",
+    "permission": "administrator"
+  },
+  {
+    "name": "command enable",
+    "arguments": ["command"],
+    "category": "grief",
+    "description": "Enable a command for the server.",
+    "permission": "administrator"
+  },
+  {
+    "name": "command disable",
+    "arguments": ["command"],
+    "category": "grief",
+    "description": "Disable a command for the server.",
+    "permission": "administrator"
+  },
+  {
+    "name": "alias add",
+    "arguments": ["name", "command"],
+    "category": "grief",
+    "description": "Add an alias for a command.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "alias remove",
+    "arguments": ["name"],
+    "category": "grief",
+    "description": "Remove an alias for a command.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "alias edit",
+    "arguments": ["name", "command"],
+    "category": "grief",
+    "description": "Edit an alias for a command.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "alias list",
+    "category": "grief",
+    "description": "List all the aliases in the server.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "alias show",
+    "arguments": ["alias"],
+    "category": "grief",
+    "description": "Show what command an alias executes.",
+    "permission": "manage guild"
+  },      
+  {
     "name": "nick",
     "arguments": ["member", "nickname"],
     "category": "mod",
     "description": "Change a member's server nickname.",
     "permission": "manage nicknames"
+  },
+  {
+    "name": "uwulock",
+    "arguments": ["member"],
+    "category": "mod",
+    "description": "Force a user to talk in uwu.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "stfu",
+    "arguments": ["member"],
+    "category": "mod",
+    "description": "Automatically deletes a users messages.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "gedit banner",
+    "arguments": ["image/url"],
+    "category": "mod",
+    "description": "Set the server banner. Leave blank to clear.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "gedit icon",
+    "arguments": ["image/url"],
+    "category": "mod",
+    "description": "Set the server icon. Leave blank to clear.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "gedit splash",
+    "arguments": ["image/url"],
+    "category": "mod",
+    "description": "Set the server splash. Leave blank to clear.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "lock",
+    "arguments": ["channel", "role/members"],
+    "category": "mod",
+    "description": "Lock a channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "lock server",
+    "arguments": ["roles"],
+    "category": "mod",
+    "description": "Lock the server for the specified roles.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role addmulti",
+    "arguments": ["role", "members"],
+    "category": "mod",
+    "description": "Add a role to multiple members.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "autopublisher toggle",
+    "category": "mod",
+    "description": "Toggle whether or not messages autopublish in announcement channels.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autopublisher ignore",
+    "arguments": ["channel"],
+    "category": "mod",
+    "description": "Ignore messages from getting autopublished in the specified channel.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autopublisher reset",
+    "category": "mod",
+    "description": "Reset the autopublisher module.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autopublisher settings",
+    "category": "mod",
+    "description": "View settings for autopublisher.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "role all",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Add a role to all members.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role bots",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Add a role to all bots.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role color",
+    "arguments": ["role", "color"],
+    "category": "mod",
+    "description": "Change the color of a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role create",
+    "arguments": ["color", "hoist", "name"],
+    "category": "mod",
+    "description": "Create a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role delete",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Delete a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role displayicon",
+    "arguments": ["role", "emoji/link"],
+    "category": "mod",
+    "description": "Change the icon of a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role hoist",
+    "arguments": ["role", "true/false"],
+    "category": "mod",
+    "description": "Change whether or not a role is hoisted or not.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role humans",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Add a role to all humans.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role in",
+    "arguments": ["target role", "add role"],
+    "category": "mod",
+    "description": "Add a role to all members of a another role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role name",
+    "arguments": ["role", "name"],
+    "category": "mod",
+    "description": "Changes the name of a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role rall",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Removes everyone from a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role rbots",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Removes bots from a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role remove",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Removes a member from a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role removemulti",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Removes multiple member from a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role rhumans",
+    "arguments": ["role"],
+    "category": "mod",
+    "description": "Removes all huamns from a role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "role rin",
+    "arguments": ["target role", "remove role"],
+    "category": "mod",
+    "description": "Remove a role from all members of a another role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "hardban",
+    "arguments": ["member"],
+    "category": "mod",
+    "description": "Automatically reban a user if they are unbanned.",
+    "permission": "guild owner"
+  },
+  {
+    "name": "hardunban",
+    "arguments": ["member"],
+    "category": "mod",
+    "description": "Remove a user from getting automatically banned if unbanned.",
+    "permission": "guild owner"
+  },
+  {
+    "name": "listhardban",
+    "arguments": ["member"],
+    "category": "mod",
+    "description": "List the users affected by hardban.",
+    "permission": "guild owner"
   },
     {
     "name": "userinfo",
@@ -14,7 +342,7 @@
     "description": "Show information about a member.",
     "permission": "none"
   },
-    {
+  {
     "name": "kick",
     "arguments": ["member", "reason"],
     "category": "mod",
@@ -140,10 +468,149 @@
     "permission": "manage messages"
   },
   {
+    "name": "say",
+    "arguments": ["channel", "text"],
+    "category": "mod",
+    "description": "Grief will send whatever you type.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "sayd",
+    "arguments": ["channel", "text"],
+    "category": "mod",
+    "description": "Grief will repeat whatever you type and delete the original command.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "sayad",
+    "arguments": ["channel", "text"],
+    "category": "mod",
+    "description": "Same as say command, except it deletes the said message after a set number of seconds.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "saym",
+    "arguments": ["channel", "text"],
+    "category": "mod",
+    "description": "Same as say command, except role and mass mentions are enabled.",
+    "permission": "administrator"
+  },
+  {
+    "name": "purge",
+    "arguments": ["amount", "channel"],
+    "category": "mod",
+    "description": "Clear the specfied number of messages out of chat.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge after",
+    "arguments": ["message id"],
+    "category": "mod",
+    "description": "Purge all the messages after a specified message ID.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge before",
+    "arguments": ["message id"],
+    "category": "mod",
+    "description": "Purge all the messages before a specified message ID.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge between",
+    "arguments": ["after message", "before message"],
+    "category": "mod",
+    "description": "Purge all the messages between a specified message ID.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge bots",
+    "category": "mod",
+    "description": "Purge all the bot messages out of chat.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge contains",
+    "arguments": ["word"],
+    "category": "mod",
+    "description": "Purge all the messages containing a specified word.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge duplicates",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all the messages containing a duplicated word.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge embeds",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all the messages containing an embed.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge emoji",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all the messages containing an emoji.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge files",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all the messages containing an file.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge images",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all the messages containing an image.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge links",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all the messages containing an link.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge mine",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all Grief's responses from chat.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge reactions",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all the messages containing an reaction from chat.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "purge user",
+    "arguments": ["member", "number"],
+    "category": "mod",
+    "description": "Purge all the messages from a specified user.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "selfpurge",
+    "arguments": ["number"],
+    "category": "mod",
+    "description": "Purge all your messages from chat.",
+    "permission": "manage messages"
+  },
+  {
     "name": "vanity channel",
     "arguments": ["channel"],
     "aliases": "",
-    "category": "Funny",
+    "category": "vanity",
     "description": "Setup the vanity log channel.",
     "permission": "manage guild"
   },
@@ -151,17 +618,38 @@
     "name": "vanity role",
     "arguments": ["role"],
     "aliases": "",
-    "category": "Utility",
+    "category": "vanity",
     "description": "Setup the vanity role.",
     "permission": "manage guild"
   },
   {
-    "name": "vanity toggle true",
-    "arguments": ["invite", "code"],
+    "name": "vanity toggle",
+    "arguments": ["true/false", "invite code"],
     "aliases": "",
-    "category": "Voicemaster",
+    "category": "vanity",
     "description": "Setup the vanity module. Do not use a slash.",
     "permission": "manage guild"
+  },
+  {
+    "name": "infochannel",
+    "aliases": "mc",
+    "category": "info",
+    "description": "Toggle info channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "infochannelset name",
+    "arguments": ["type", "name"],
+    "category": "info",
+    "description": "Change the name of the infochannel for the specified channel type.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "infochannelset togglechannel",
+    "arguments": ["type", "true/false"],
+    "category": "info",
+    "description": "Toggles the infochannel for the specified channel type.",
+    "permission": "manage channels"
   },
   {
     "name": "avatar",
@@ -169,6 +657,24 @@
     "aliases": "",
     "category": "info",
     "description": "Fetch a users avatar."
+  },
+  {
+    "name": "whois",
+    "arguments": ["member"],
+    "category": "info",
+    "description": "Displays the servers you share with the user and the bot."
+  },
+  {
+  "name": "membercount",
+  "aliases": "mc",
+  "category": "info",
+  "description": "Display server membercount."
+  },
+  {
+    "name": "names",
+    "arguments": ["member"],
+    "category": "info",
+    "description": "Displays the users last 20 display, usernames, and nicknames."
   },
   {
     "name": "banner",
@@ -223,6 +729,2056 @@
     "name": "guildemojis",
     "aliases": "",
     "category": "info",
-    "description": "Fetches the emojis in the specified server.."
+    "description": "Fetches the emojis in the specified server."
+  },
+  {
+    "name": "serverbanner",
+    "aliases": "",
+    "category": "info",
+    "description": "Fetches the server banner."
+  },
+  {
+    "name": "servericon",
+    "aliases": "",
+    "category": "info",
+    "description": "Fetches the server icon."
+  },
+  {
+    "name": "serverinfo",
+    "aliases": "",
+    "category": "info",
+    "description": "Displays information about the server."
+  },
+  {
+    "name": "inviteinfo",
+    "arguments": ["invite code"],
+    "aliases": "",
+    "category": "info",
+    "description": "Fetches information about the invite."
+  },
+  {
+    "name": "invitesplash",
+    "aliases": "",
+    "category": "info",
+    "description": "Fetches the server invite splash."
+  },
+  {
+    "name": "joined",
+    "arguments": ["member"],
+    "aliases": "",
+    "category": "info",
+    "description": "Displays when the user joined the server."
+  },
+  {
+    "name": "oldestaccounts",
+    "aliases": "",
+    "category": "info",
+    "description": "Displays the oldest accounts in the server."
+  },
+  {
+    "name": "oldestmembers",
+    "aliases": "",
+    "category": "info",
+    "description": "Displays the first 10 members."
+  },
+  {
+    "name": "roleinfo",
+    "arguments": ["role"],
+    "aliases": "",
+    "category": "info",
+    "description": "Displays information about an role.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "roles",
+    "aliases": "",
+    "category": "info",
+    "description": "Displays the servers roles.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "serveravatar",
+    "arguments": ["member"],
+    "aliases": "",
+    "category": "info",
+    "description": "Sends a member's server avatar."
+  },
+  {
+    "name": "spotify",
+    "arguments": ["member"],
+    "aliases": "",
+    "category": "info",
+    "description": "Sends what the user is listening to on Spotify."
+  },
+  {
+    "name": "editguild afkchannel",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Edits the afk channel for the guild.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild community",
+    "arguments": ["true/false"],
+    "category": "editguild",
+    "description": "Toggles whether or not community features are enabled.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild description",
+    "arguments": ["description"],
+    "category": "editguild",
+    "description": "Changes the server description. Leave blank to clear.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild discoverable",
+    "arguments": ["true/false"],
+    "category": "editguild",
+    "description": "Changes the whether or not the server is discoverable.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild invitesdisabled",
+    "arguments": ["true/false"],
+    "category": "editguild",
+    "description": "Changes the whether or not the server has invites paused.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild name",
+    "arguments": ["name"],
+    "category": "editguild",
+    "description": "Changes the the server name.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild premiumprogressbarenabled",
+    "arguments": ["true/false"],
+    "category": "editguild",
+    "description": "Changes the whether or not the server has the server boost tab enabled.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild publicupdateschannel",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Changes the with channel Discord sends public updates to.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild ruleschannel",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Changes the channel Discord displays as the rules channel.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "editguild systemchannel",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Changes the channel in which Discord sends server updates to.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "edittextchannel category",
+    "arguments": ["channel", "category"],
+    "category": "editguild",
+    "description": "Edit which category a text channel will be in.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel clone",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Clone a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel create",
+    "arguments": ["category", "name"],
+    "category": "editguild",
+    "description": "Create a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel defaultautoarchiveduration",
+    "arguments": ["channel", "time"],
+    "category": "editguild",
+    "description": "Edit the auto archive duration in minutes for threads created in this channel. Must be one of 60, 1440, 4320, or 10080.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel defaultthreadslowmodedelay",
+    "arguments": ["channel", "time"],
+    "category": "editguild",
+    "description": "Edit the slowmode in minutes for threads created in this channel. Must be one of 60, 1440, 4320, or 10080.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel delete",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Delete a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel invite",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Create an invite a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel name",
+    "arguments": ["channel", "name"],
+    "category": "editguild",
+    "description": "Rename a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel nsfw",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Mark a channel as NSFW.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel create",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Create an invite a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel permissions",
+    "arguments": ["ch", "who/what", "true/false", "perms"],
+    "category": "editguild",
+    "description": "Modifiy permissions for a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel position",
+    "arguments": ["channel", "position"],
+    "category": "editguild",
+    "description": "Modifiy the position of a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel slowmodedely",
+    "arguments": ["channel", "delay"],
+    "category": "editguild",
+    "description": "Modifiy the slowmode of a text channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel topic",
+    "arguments": ["channel", "topic"],
+    "category": "editguild",
+    "description": "Modify the topic of a text channel. Leave blank to clear.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "edittextchannel type",
+    "arguments": ["channel", "0/5"],
+    "category": "editguild",
+    "description": "Modify the type of text channel. 0: text. 5: news.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread adduser",
+    "arguments": ["thread", "user"],
+    "category": "editguild",
+    "description": "Add a user to a thread.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread appliedtags",
+    "arguments": ["thread", "tags"],
+    "category": "editguild",
+    "description": "Add or remove tags from a thread post.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread archived",
+    "arguments": ["thread", "true/false"],
+    "category": "editguild",
+    "description": "Archive/unarchive a thread post.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread autoarchivedduration",
+    "arguments": ["thread", "time"],
+    "category": "editguild",
+    "description": "Edit thread auto archive duration.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread create",
+    "arguments": ["channel", "name"],
+    "category": "editguild",
+    "description": "Use grief to create a thread.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread delete",
+    "arguments": ["thread"],
+    "category": "editguild",
+    "description": "Use grief to delete a thread.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread list",
+    "arguments": ["thread"],
+    "category": "editguild",
+    "description": "List all the threads in the server.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread locked",
+    "arguments": ["thread"],
+    "category": "editguild",
+    "description": "Lock a thread, only allowing moderators to speak.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread name",
+    "arguments": ["thread", "name"],
+    "category": "editguild",
+    "description": "Edit a threads name.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread pinned",
+    "arguments": ["thread", "pinned"],
+    "category": "editguild",
+    "description": "Pin a message inside a thread.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread removeuser",
+    "arguments": ["thread", "user"],
+    "category": "editguild",
+    "description": "Remove a user from a thread.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editthread slowmodedelay",
+    "arguments": ["thread", "delay"],
+    "category": "editguild",
+    "description": "Set a slowmode delay for a thread.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel bitrate",
+    "arguments": ["channel", "bitrate"],
+    "category": "editguild",
+    "description": "Edit voice channel bitrate.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel category",
+    "arguments": ["channel", "category"],
+    "category": "editguild",
+    "description": "Edit voice channel category.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel clone",
+    "arguments": ["channel", "name"],
+    "category": "editguild",
+    "description": "Clone a voice channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel create",
+    "arguments": ["category", "name"],
+    "category": "editguild",
+    "description": "Create a voice channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel delete",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Delete a voice channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel invite",
+    "arguments": ["channel"],
+    "category": "editguild",
+    "description": "Create an invite to the voice channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel list",
+    "category": "editguild",
+    "description": "Show all the voice channels in the server.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel name",
+    "arguments": ["channel", "new name"],
+    "category": "editguild",
+    "description": "Change the name of a voice channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel permissions",
+    "arguments": ["ch", "who/what", "true/false", "perms"],
+    "category": "editguild",
+    "description": "Edit the permissions for a voice channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel position",
+    "arguments": ["channel", "position"],
+    "category": "editguild",
+    "description": "Edit the position for a voice channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel syncpermissions",
+    "arguments": ["channel", "true/false"],
+    "category": "editguild",
+    "description": "Edit voice channel sync permissions.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel userlimit",
+    "arguments": ["channel", "limit"],
+    "category": "editguild",
+    "description": "Edit the max amount of users allowed in a voice channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "editvoicechannel videoqualitymode",
+    "arguments": ["channel", "1|2"],
+    "category": "editguild",
+    "description": "Edit voice channel video quality mode.",
+    "permission": "manage channels"
+  },
+  { 
+    "name": "autokickset add",
+    "arguments": ["user"],
+    "category": "autokick",
+    "description": "Add a user to automatically get kicked upon join.",
+    "permission": "kick members"
+  },
+  {
+    "name": "autokickset remove",
+    "arguments": ["user"],
+    "category": "autokick",
+    "description": "Remove a user from automatically getting kicked upon join.",
+    "permission": "kick members"
+  },
+  {
+    "name": "autokickset enable",
+    "category": "autokick",
+    "description": "Enable the autokick module.",
+    "permission": "kick members"
+  },
+  {
+    "name": "autokickset disable",
+    "category": "autokick",
+    "description": "Enable the autokick module.",
+    "permission": "kick members"
+  },
+  {
+    "name": "autokickset list",
+    "category": "autokick",
+    "description": "List the users affected by autokick.",
+    "permission": "kick members"
+  },
+  {
+    "name": "snipe",
+    "arguments": ["channel"],
+    "category": "snipe",
+    "description": "Shows the last deleted messages in a channel."
+  },
+  {
+    "name": "snipeembed",
+    "arguments": ["channel"],
+    "category": "snipe",
+    "description": "Shows the last deleted embeds in a channel."
+  },
+  {
+    "name": "bulksnipe",
+    "arguments": ["channel"],
+    "category": "snipe",
+    "description": "Snipe all the last deleted messages in a channel."
+  },
+  {
+    "name": "editsnipebulk",
+    "arguments": ["channel"],
+    "category": "snipe",
+    "description": "Snipe all the last edited messages in a channel."
+  },
+  {
+    "name": "editsnipe",
+    "arguments": ["channel"],
+    "category": "snipe",
+    "description": "Snipe the last edited message in a channel."
+  },
+  {
+    "name": "reactsnipe",
+    "arguments": ["channel"],
+    "category": "snipe",
+    "description": "Snipe the last removed reaction in a channel."
+  },
+  {
+    "name": "reactsnipebulk",
+    "arguments": ["channel"],
+    "category": "snipe",
+    "description": "Snipe all the removed reactions in a channel."
+  },
+  {
+    "name": "reactsnipeuser",
+    "arguments": ["user", "channel"],
+    "category": "snipe",
+    "description": "Snipe the last removed reaction in a channel."
+  },
+  {
+    "name": "editsnipeuser",
+    "arguments": ["user", "channel"],
+    "category": "snipe",
+    "description": "Snipe the users edited messages in a channel."
+  },
+  {
+    "name": "snipeuser",
+    "arguments": ["user", "channel"],
+    "category": "snipe",
+    "description": "Shows the last deleted messages sent by the user in a channel."
+  },
+  {
+    "name": "autoreact channel",
+    "arguments": ["channel", "emojis"],
+    "category": "autoreact",
+    "description": "Set a list of emoji to react with in the channel",
+    "permission": "manage channels"
+  },
+  {
+    "name": "autoreact clear",
+    "category": "autoreact",
+    "description": "Clear the autoreact config.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "autoreact set",
+    "arguments": ["user", "emojis"],
+    "category": "autoreact",
+    "description": "Set a list of emoji to react with on a user.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "autoreact show",
+    "category": "autoreact",
+    "description": "Show all emoji reacts for all users in guild.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "sticky",
+    "arguments": ["content"],
+    "category": "sticky",
+    "description": "Have a message always appear at the bottom of the channel.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "unsticky",
+    "category": "sticky",
+    "description": "Unsticky all messages in a channel.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "sticky existing",
+    "arguments": ["message_id_or_url"],
+    "category": "sticky",
+    "description": "Sticky an already existing message.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "sticky toggleheader",
+    "category": "sticky",
+    "description": "Toggle the header for stickied messages.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "autoroomset create",
+    "arguments": ["source", "destination"],
+    "category": "voicemaster",
+    "description": "Anyone joining an autoroom source will automatically have a new voice channel.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify category",
+    "arguments": ["source", "destination"],
+    "category": "voicemaster",
+    "description": "Anyone joining an autoroom source will automatically have a new voice channel.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify name custom",
+    "arguments": ["source", "name"],
+    "category": "voicemaster",
+    "description": "Set a default name for new voice channels.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify name game",
+    "arguments": ["source"],
+    "category": "voicemaster",
+    "description": "The users current playing game, otherwise the username format.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify text set",
+    "arguments": ["source", "text"],
+    "category": "voicemaster",
+    "description": "Configure sending an introductory message to the voice text channel.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify text disable",
+    "arguments": ["source"],
+    "category": "voicemaster",
+    "description": "Disable sending an introductory message to the voice text channel.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify type locked",
+    "arguments": ["source"],
+    "category": "voicemaster",
+    "description": "Rooms will be visible to all, but not joinable.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify type private",
+    "arguments": ["source"],
+    "category": "voicemaster",
+    "description": "Rooms will be hidden.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify type public",
+    "arguments": ["source"],
+    "category": "voicemaster",
+    "description": "Rooms will be public.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset modify type server",
+    "arguments": ["source"],
+    "category": "voicemaster",
+    "description": "Rooms will be open to all, but the server owns the room so, they can't be modified.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroomset remove",
+    "arguments": ["source"],
+    "category": "voicemaster",
+    "description": "Remove an automatic VC source.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "autoroom allow",
+    "arguments": ["member/role"],
+    "category": "voicemaster",
+    "description": "Allow a user or into your voice channel."
+  },
+  {
+    "name": "autoroom deny",
+    "arguments": ["member/role"],
+    "category": "voicemaster",
+    "description": "Deny a user or into your voice channel."
+  },
+  {
+    "name": "autoroom deny",
+    "arguments": ["member/role"],
+    "category": "voicemaster",
+    "description": "Deny a user or into your voice channel."
+  },
+  {
+    "name": "autoroom locked",
+    "category": "voicemaster",
+    "description": "Voice channel will be visible but no one can join."
+  },
+  {
+    "name": "autoroom name",
+    "arguments": ["name"],
+    "category": "voicemaster",
+    "description": "Change the name of your voice channel."
+  },
+  {
+    "name": "autoroom private",
+    "category": "voicemaster",
+    "description": "Voice channel will be hidden from normal members."
+  },
+  {
+    "name": "autoroom public",
+    "category": "voicemaster",
+    "description": "Voice channel will be shown to normal members."
+  },
+  {
+    "name": "autoroom settings",
+    "category": "voicemaster",
+    "description": "View the settings of the voice channel."
+  },
+  {
+    "name": "autoroom users",
+    "arguments": ["limit"],
+    "category": "voicemaster",
+    "description": "Change how many members are able to join the voice channel."
+  },
+  {
+    "name": "autoroom users",
+    "arguments": ["limit"],
+    "category": "voicemaster",
+    "description": "Change how many members are able to join the voice channel."
+  },
+  {
+    "name": "hellohook setgreet",
+    "arguments": ["json"],
+    "category": "hellohook",
+    "description": "Use webhooks to welcome new members.",
+    "permission": "manage webhooks"
+  },
+  {
+    "name": "hellohook reset",
+    "arguments": ["true"],
+    "category": "hellohook",
+    "description": "Reset welcome settings.",
+    "permission": "manage webhooks"
+  },
+  {
+    "name": "hellohook setgreethook",
+    "arguments": ["webhook"],
+    "category": "hellohook",
+    "description": "Set the webhook used to welcome new members.",
+    "permission": "manage webhooks"
+  },
+  {
+    "name": "hellohook setleave",
+    "arguments": ["json"],
+    "category": "hellohook",
+    "description": "Use webhooks to set a goodbye message.",
+    "permission": "manage webhooks"
+  },
+  {
+    "name": "hellohook setleavehook",
+    "arguments": ["webhook"],
+    "category": "hellohook",
+    "description": "Set the webhook used to send goodbye messages.",
+    "permission": "manage webhooks"
+  },
+  {
+    "name": "hellohook settings",
+    "category": "hellohook",
+    "description": "View settings for hellohook.",
+    "permission": "manage webhooks"
+  },
+  {
+    "name": "hellohook test",
+    "category": "hellohook",
+    "description": "Test settings for hellohook.",
+    "permission": "manage webhooks"
+  },
+  {
+    "name": "hellohook toggle",
+    "arguments": ["greet/leave", "true/false"],
+    "category": "hellohook",
+    "description": "Test settings for hellohook.",
+    "permission": "manage webhooks"
+  },
+  {
+    "name": "fuck",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Fuck a user."
+  },
+  {
+    "name": "bite",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Bite a user."
+  },
+  {
+    "name": "cuddle",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Cuddle a user."
+  },
+  {
+    "name": "feed",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Feed a user."
+  },
+  {
+    "name": "highfive",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Highfive a user."
+  },
+  {
+    "name": "hug",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Hug a user."
+  },
+  {
+    "name": "kill",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Kill a user."
+  },
+  {
+    "name": "kiss",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Kiss a user."
+  },
+  {
+    "name": "lick",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Lick a user."
+  },
+  {
+    "name": "nutkick",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Kick a user in the balls."
+  },
+  {
+    "name": "pat",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Pat a user in the balls."
+  },
+  {
+    "name": "poke",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Poke a user."
+  },
+  {
+    "name": "punch",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Punch a user."
+  },
+  {
+    "name": "slap",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Slap a user."
+  },
+  {
+    "name": "spank",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Spank a user."
+  },
+  {
+    "name": "tickle",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Tickle a user."
+  },
+  {
+    "name": "yeet",
+    "arguments": ["user"],
+    "category": "roleplay",
+    "description": "Yeet a user."
+  },
+  {
+    "name": "jpset channel add",
+    "arguments": ["channel"],
+    "category": "ping on join",
+    "description": "Setup a channel to ghost ping users on join.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "jpset channel remove",
+    "arguments": ["channel"],
+    "category": "ping on join",
+    "description": "Remove a channel from ghost pingng users on join.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "jpset channel deleteafter",
+    "arguments": ["time"],
+    "category": "ping on join",
+    "description": "Set the time it takes to delete the ping.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "jpset channel message",
+    "arguments": ["message"],
+    "category": "ping on join",
+    "description": "Set the message sent when pinging users.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "jpset channel show",
+    "category": "ping on join",
+    "description": "Show the channels setup to ping users.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "modlog all",
+    "arguments": ["true/false"],
+    "category": "modlogs",
+    "description": "Turn on or off all modlogs.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog bot change",
+    "category": "modlogs",
+    "description": "Toggle bots from being logged in user updates.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog bot delete",
+    "category": "modlogs",
+    "description": "Toggle message delete notifications for bot users.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog bot edits",
+    "category": "modlogs",
+    "description": "Toggle message edit notifications for bot users.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog bot voice",
+    "category": "modlogs",
+    "description": "Toggle voice notifications for bot users.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog channel",
+    "arguments": ["channel", "events"],
+    "category": "modlogs",
+    "description": "Set the channel for modlogs.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog channel",
+    "arguments": ["channel", "events"],
+    "category": "modlogs",
+    "description": "Set the channel for modlogs.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog channel",
+    "arguments": ["channel", "events"],
+    "category": "modlogs",
+    "description": "Set the channel for modlogs.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog delete bulkdelete",
+    "category": "modlogs",
+    "description": "Toggle bulk message delete notifications.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog delete ignorecommands",
+    "category": "modlogs",
+    "description": "Toggle message delete notifications for valid bot commands.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog delete individual",
+    "category": "modlogs",
+    "description": "Toggle Individual message delete logs for bulk message deletes.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog ignore",
+    "arguments": ["channel"],
+    "category": "modlogs",
+    "description": "Ignore a channel from message delete/edit events and bot commands.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog settings",
+    "category": "modlogs",
+    "description": "Shows the current modlog settings.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog toggle",
+    "arguments": ["true/false", "events"],
+    "category": "modlogs",
+    "description": "Turn on and off specific modlog actions.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "modlog unignore",
+    "arguments": ["channel"],
+    "category": "modlogs",
+    "description": "Unignore a channel from message delete/edit events and bot commands.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard allowlist add",
+    "arguments": ["channel/roles"],
+    "category": "starboard",
+    "description": "Add channels/roles from the allowlist",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard allowlist remove",
+    "arguments": ["starboard", "channels/roles"],
+    "category": "starboard",
+    "description": "Remove channels/roles from the allowlist",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard autostar",
+    "arguments": ["starboard"],
+    "category": "starboard",
+    "description": "Toggle whether or not the bot will add the emoji automatically to the starboard message.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard blocklist add",
+    "arguments": ["starboard", "channels/roles"],
+    "category": "starboard",
+    "description": "Add channels/roles from the blocklist.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard blocklist remove",
+    "arguments": ["starboard", "channels/roles"],
+    "category": "starboard",
+    "description": "Remove channels/roles from the blocklist.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard channel",
+    "arguments": ["starboard", "channel"],
+    "category": "starboard",
+    "description": "Change the channel that the starboard gets posted to.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard cleanup",
+    "category": "starboard",
+    "description": "Cleanup stored deleted channels or roles in the blocklist/allowlist.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard colour",
+    "arguments": ["starboard", "colour"],
+    "category": "starboard",
+    "description": "Change the color of the messages posted by the starboard.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard create",
+    "arguments": ["name", "channel", "emoji"],
+    "category": "starboard",
+    "description": "Create a starboard on this server",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard emoji",
+    "arguments": ["name", "emoji"],
+    "category": "starboard",
+    "description": "Set the emoji used to trigger the starboard.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard info",
+    "category": "starboard",
+    "description": "Display information on all the starboards.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard inherit",
+    "arguments": ["starboard"],
+    "category": "starboard",
+    "description": "Set whether to inherit the parent channels blocklist/allowlist settings.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard remove",
+    "arguments": ["starboard"],
+    "category": "starboard",
+    "description": "Remove a starboard that is setup.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard selfstar",
+    "arguments": ["starboard"],
+    "category": "starboard",
+    "description": "Set whether or not a user can selfstar their own post.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard threshold",
+    "arguments": ["starboard", "threshold"],
+    "category": "starboard",
+    "description": "Set the threshold before posting a message.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "starboard toggle",
+    "arguments": ["starboard"],
+    "category": "starboard",
+    "description": "Toggle a starboard on or off.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "deleter channel",
+    "arguments": ["channel", "wait"],
+    "category": "autopurge",
+    "description": "Autopurge messages from chat after a specified time.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "deleter remove",
+    "arguments": ["channel"],
+    "category": "autopurge",
+    "description": "Remove a channel from auto-purge.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "deleter wipe",
+    "arguments": ["channel"],
+    "category": "autopurge",
+    "description": "Removes all messages in the specified channel from the auto-timed deleter.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "galleryset add",
+    "arguments": ["channel"],
+    "category": "image only",
+    "description": "Removes all messages in the specified channel that doesn't contain an image.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "galleryset remove",
+    "arguments": ["channel"],
+    "category": "image only",
+    "description": "Remove the channel being affected by image only.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "galleryset role",
+    "arguments": ["role"],
+    "category": "image only",
+    "description": "Whitelist/unwhitelist a role from being affected by image only.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "galleryset settings",
+    "category": "image only",
+    "description": "View the settings for image only.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "galleryset time",
+    "arguments": ["time"],
+    "category": "image only",
+    "description": "Set the time in seconds before the bot deletes the message.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bumpreminder channel",
+    "arguments": ["channel"],
+    "category": "reminders",
+    "description": "Set the channel to send bump reminders to. Leave blank to toggle off.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bumpreminder clean",
+    "category": "reminders",
+    "description": "Toggle whether or not I should keep the channel clean.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bumpreminder lock",
+    "category": "reminders",
+    "description": "Toggle whether or not the channel automatically locks/unlocks.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bumpreminder message",
+    "category": "reminders",
+    "description": "Change the message sent for the reminders.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bumpreminder pingrole",
+    "arguments": ["role"],
+    "category": "reminders",
+    "description": "Change the role pinged for reminders.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bumpreminder thankyou",
+    "arguments": ["role"],
+    "category": "reminders",
+    "description": "Change the message sent after the server is bumped.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "remind",
+    "arguments": ["time", "reminder"],
+    "category": "reminders",
+    "description": "Setup a reminder."
+  },
+  {
+    "name": "remind forget all",
+    "category": "reminders",
+    "description": "Forget all your reminders."
+  },
+  {
+    "name": "remind forget one",
+    "arguments": ["index"],
+    "category": "reminders",
+    "description": "Forget one of your reminders. Do reminders list to get the index number."
+  },
+  {
+    "name": "remind list",
+    "category": "reminders",
+    "description": "List all of your reminders."
+  },
+  {
+    "name": "remind offset",
+    "arguments": ["offset_time_in_hours"],
+    "category": "reminders",
+    "description": "Set a timezone for your reminders."
+  },
+  {
+    "name": "settickettool adminroles",
+    "arguments": ["profile", "roles"],
+    "category": "tickettool",
+    "description": "Users with this role will have full permissions for tickets, but will not be able to set up the cog.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool categoryclose",
+    "arguments": ["profile", "channel"],
+    "category": "tickettool",
+    "description": "Set the category where the closed tickets will be.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool categoryopen",
+    "arguments": ["profile", "channel"],
+    "category": "tickettool",
+    "description": "Set the category where the opened tickets will be.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool closeconfirmation",
+    "arguments": ["profile", "true/false"],
+    "category": "tickettool",
+    "description": "Set whether or not the bot ask for confirmation before closing the ticket.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool closeonleave",
+    "arguments": ["profile", "true/false"],
+    "category": "tickettool",
+    "description": "Set whether or not the bot should close the ticket if the user leaves.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool custommessage",
+    "arguments": ["profile", "message"],
+    "category": "tickettool",
+    "description": "Set a custom messages to be sent when a ticket is opened.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool deleteonclose",
+    "arguments": ["profile", "true/false"],
+    "category": "tickettool",
+    "description": "Set whether or not the ticket is auto-deleted when the ticket is closed.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool dynamicchannelname",
+    "arguments": ["profile", "name"],
+    "category": "tickettool",
+    "description": "Set a custom name for the tickets when opened. Run the command for list of variables.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool enable",
+    "arguments": ["profile", "true/false"],
+    "category": "tickettool",
+    "description": "Enable/disable the ticket module.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool logschannel",
+    "arguments": ["profile", "channel"],
+    "category": "tickettool",
+    "description": "Set where logs from tickets are sent.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool message",
+    "arguments": ["profile", "message-id"],
+    "category": "tickettool",
+    "description": "Set the message the button will appear on, message must be sent by Grief.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool nbmax",
+    "arguments": ["profile", "nbmax"],
+    "category": "tickettool",
+    "description": "Set the max number of tickets that can be open at one time.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool pingroles",
+    "arguments": ["profile", "roles"],
+    "category": "tickettool",
+    "description": "Set the roles that are pinged when a ticket is opened.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool profileclone",
+    "arguments": ["old profile", "new profile"],
+    "category": "tickettool",
+    "description": "Clone an existing profile.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool profileremove",
+    "arguments": ["profile"],
+    "category": "tickettool",
+    "description": "Remove an existing profile.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool profilerename",
+    "arguments": ["profile", "newname"],
+    "category": "tickettool",
+    "description": "Rename an existing profile.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool profileslist",
+    "category": "tickettool",
+    "description": "List all the existing profiles.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool supportroles",
+    "category": "tickettool",
+    "arguments": ["profile", "roles"],
+    "description": "Users with this role will be able to participate and claim the ticket.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "settickettool usercanclose",
+    "category": "tickettool",
+    "arguments": ["profile", "true/false"],
+    "description": "Set whether or not the ticket owner can close their own ticket.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "ticket addmember",
+    "category": "tickettool",
+    "arguments": ["member"],
+    "description": "Add a member to a ticket."
+  },
+  {
+    "name": "ticket claim",
+    "category": "tickettool",
+    "description": "Claim an open ticket."
+  },
+  {
+    "name": "ticket close",
+    "category": "tickettool",
+    "description": "Close an open ticket."
+  },
+  {
+    "name": "ticket delete",
+    "category": "tickettool",
+    "description": "Delete an open ticket."
+  },
+  {
+    "name": "ticket export",
+    "category": "tickettool",
+    "description": "Export all the messages of an existing ticket in html format."
+  },
+  {
+    "name": "ticket list",
+    "arguments": ["profile"],
+    "category": "tickettool",
+    "description": "List the existing tickets for a profile."
+  },
+  {
+    "name": "ticket lock",
+    "category": "tickettool",
+    "description": "Lock a ticket."
+  },
+  {
+    "name": "ticket owner",
+    "arguments": ["new owner"],
+    "category": "tickettool",
+    "description": "Change the owner of a ticket."
+  },
+  {
+    "name": "ticket removemember",
+    "arguments": ["member"],
+    "category": "tickettool",
+    "description": "Remove a member from a ticket."
+  },
+  {
+    "name": "ticket rename",
+    "arguments": ["name"],
+    "category": "tickettool",
+    "description": "Rename a ticket."
+  },
+  {
+    "name": "ticket unlock",
+    "category": "tickettool",
+    "description": "Unlock a locked ticket."
+  },
+  {
+    "name": "uwuify",
+    "category": "fun",
+    "arguments": ["text"],
+    "description": "Uwuify a message."
+  },
+  {
+    "name": "8ball",
+    "category": "fun",
+    "arguments": ["question"],
+    "description": "Ask then 8ball a question."
+  },
+  {
+    "name": "flip",
+    "arguments": ["heads/tails"],
+    "category": "fun",
+    "description": "Flip a coin."
+  },
+  {
+    "name": "penis",
+    "arguments": ["user/users"],
+    "category": "fun",
+    "description": "Get the penis size of you or another user. Provide multiple members to compare."
+  },
+  {
+    "name": "rps",
+    "arguments": ["rock/paper/scissors"],
+    "category": "fun",
+    "description": "Play rock paper scissors against the bot."
+  },
+  {
+    "name": "roll",
+    "category": "fun",
+    "description": "Roll a random number."
+  },
+  {
+    "name": "choose",
+    "arguments": ["choices"],
+    "category": "fun",
+    "description": "Have the bot choose between multiple options."
+  },
+  {
+    "name": "stopwatch",
+    "category": "fun",
+    "description": "Start/stop the stopwatch."
+  },
+  {
+    "name": "urban",
+    "arguments": ["word"],
+    "category": "fun",
+    "description": "Search Urban Dictonary for the meaning of a word."
+  },
+  {
+    "name": "bdset msgwithoutyear",
+    "arguments": ["message"],
+    "category": "fun",
+    "description": "Set the message to send when the user did not provide a year.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bdset msgwithyear",
+    "arguments": ["message"],
+    "category": "fun",
+    "description": "Set the message to send when the user did provide a year.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bdset channel",
+    "arguments": ["channel"],
+    "category": "fun",
+    "description": "Set the channel where the birthday message will be sent.",
+    "permission": "manage channels/"
+  },
+  {
+    "name": "bdset role",
+    "arguments": ["role"],
+    "category": "fun",
+    "description": "Set the role that will be given to the user on their birthday.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "bdset forceset",
+    "arguments": ["user", "date"],
+    "category": "fun",
+    "description": "Force-set a specific user's birthday.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bdset forceremove",
+    "arguments": ["user", "date"],
+    "category": "fun",
+    "description": "Force-remove a specific user's birthday.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bdset rolemention",
+    "arguments": ["true/false"],
+    "category": "fun",
+    "description": "Choose whether or not to allow role mentions in birthday messages.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bdset stop",
+    "category": "fun",
+    "description": "Stop grief from sending birthday messages and giving roles in the server.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bdset time",
+    "arguments": ["time"],
+    "category": "fun",
+    "description": "Set the time of day for the birthday message.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "bdset settings",
+    "category": "fun",
+    "description": "Show the current settings for birthday.",
+    "permission": "manage channels"
+  },
+  {
+    "name": "birthday remove",
+    "category": "fun",
+    "description": "Remove your birthdate from the server."
+  },
+  {
+    "name": "birthday upcoming",
+    "category": "fun",
+    "description": "View the upcoming birthdays in the server."
+  },
+  {
+    "name": "birthday set",
+    "category": "fun",
+    "description": "Set your birthday."
+  },
+  {
+    "name": "rolesbuttons add",
+    "category": "tools",
+    "arguments": ["message", "role", "emoji", "text"],
+    "description": "Add a role-button.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "partygames bombparty",
+    "category": "fun",
+    "description": "Start a game of blacktea."
+  },
+  {
+    "name": "partygames fast",
+    "category": "fun",
+    "description": "Race to type a word the fastest."
+  },
+  {
+    "name": "partygames long",
+    "category": "fun",
+    "description": "Type the longest word."
+  },
+  {
+    "name": "partygames most",
+    "category": "fun",
+    "description": "Type the most words."
+  },
+  {
+    "name": "partygames mix",
+    "category": "fun",
+    "description": "Play a mixture of all 4 games."
+  },
+  {
+    "name": "rolesbuttons bulk",
+    "category": "tools",
+    "arguments": ["message-id", "reaction|role"],
+    "description": "Bulk add role-buttons.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "rolesbuttons clear",
+    "category": "tools",
+    "arguments": ["message-id"],
+    "description": "Clear all roles-buttons for a message.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "rolesbuttons list",
+    "category": "tools",
+    "description": "List all roles-buttons in the server.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "rolesbuttons mode",
+    "category": "tools",
+    "arguments": ["message-id", "mode"],
+    "description": "Change the mode in which roles will be given/removed. Do the base command for the list.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "rolesbuttons purge",
+    "category": "tools",
+    "description": "Delete all the roles-buttons in the server.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "rolesbuttons remove",
+    "category": "tools",
+    "arguments": ["message-id", "identifer"],
+    "description": "Remove a role-button from a message.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "embed",
+    "arguments": ["message", "color", "title", "desc"],
+    "category": "tools",
+    "description": "Make an embed easily.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "embed edit",
+    "arguments": ["message link", "json"],
+    "category": "tools",
+    "description": "Edit an embed send by the bot easily.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "embed json",
+    "arguments": ["channel", "json"],
+    "category": "tools",
+    "description": "Send an embed using json. Use https://embeds.grief.cloud",
+    "permission": "manage messages"
+  },
+  {
+    "name": "embed message",
+    "arguments": ["message-id", "message", "index"],
+    "category": "tools",
+    "description": "Post embeds from an existing message.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "emojitools add allreactionsfrom",
+    "arguments": ["message-id"],
+    "category": "tools",
+    "description": "Add all reactions on a message as emojis.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools add emoji",
+    "arguments": ["emoji", "emoji name"],
+    "category": "tools",
+    "description": "Add an existing emoji to the server.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools add emojis",
+    "arguments": ["emojis"],
+    "category": "tools",
+    "description": "Bulk add emojis to the server.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools add fromimage",
+    "arguments": ["image"],
+    "category": "tools",
+    "description": "Add an emoji from an image.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools add fromreaction",
+    "arguments": ["reaction", "message", "name"],
+    "category": "tools",
+    "description": "Add an emoji from an reaction.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools add fromzip",
+    "arguments": ["zip file"],
+    "category": "tools",
+    "description": "Bulk add emojis from a zipfile. Keep in mind this will ratelimit the server.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools delete emojis",
+    "arguments": ["emojis"],
+    "category": "tools",
+    "description": "Delete emojis from the server.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools delete all",
+    "arguments": ["true"],
+    "category": "tools",
+    "description": "Delete all emojis from the server.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools info",
+    "arguments": ["emoji"],
+    "category": "tools",
+    "description": "Provide information on the emoji."
+  },
+  {
+    "name": "emojitools tozip emojis",
+    "arguments": ["emojis"],
+    "category": "tools",
+    "description": "Get a zip file containing the specified emojis.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "emojitools tozip server",
+    "category": "tools",
+    "description": "Get a zip file containing all the emojis from the server.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "steal",
+    "arguments": ["name"],
+    "category": "tools",
+    "description": "Steals emojis and stickers you reply to and uploads them to this server.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "enlarge",
+    "category": "tools",
+    "description": "Enlarges the emojis and stickers of the message you reply to."
+  },
+  {
+    "name": "getemoji",
+    "arguments": ["emoji"],
+    "category": "tools",
+    "description": "Get the image link for custom emojis or an emoji ID."
+  },
+  {
+    "name": "uploadsticker",
+    "arguments": ["emoji"],
+    "category": "tools",
+    "description": "Uploads a sticker to the server.",
+    "permission": "manage expressions"
+  },
+  {
+    "name": "audioset autodeafen",
+    "category": "audio",
+    "description": "Toggle whether or not the bot automatically deafens in the voice channel.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset autoplay",
+    "category": "audio",
+    "description": "Toggle auto-play when there no songs in queue.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset countrycode",
+    "arguments": ["country"],
+    "category": "audio",
+    "description": "Toggle auto-play when there no songs in queue.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset dc",
+    "category": "audio",
+    "description": "Toggle the bot auto-disconnecting when done playing.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset dj",
+    "arguments": ["role"],
+    "category": "audio",
+    "description": "DJ mode only allows users with the DJ role to use audio commands.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset emptydisconnect",
+    "category": "audio",
+    "description": "Toggle the bot auto-leaving when alone.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset emptypause",
+    "arguments": ["str"],
+    "category": "audio",
+    "description": "Auto-pause after x seconds when room is empty, 0 to disable.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset lyrics",
+    "category": "audio",
+    "description": "Toggle prioritizing tracks with lyrics.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset length",
+    "arguments": ["str"],
+    "category": "audio",
+    "description": "Toggle the max length of a track to queue in seconds, 0 to disable.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "audioset maxvolume",
+    "arguments": ["str"],
+    "category": "audio",
+    "description": "Toggle the max length of a track to queue in seconds, 0 to disable.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "now",
+    "category": "audio",
+    "description": "Show the current song that is playing."
+  },
+  {
+    "name": "pause",
+    "category": "audio",
+    "description": "Pause the song that is currently playing."
+  },
+  {
+    "name": "percent",
+    "category": "audio",
+    "description": "Compare the percentage of the users who have added to the queue."
+  },
+  {
+    "name": "play",
+    "arguments": ["query/link"],
+    "category": "audio",
+    "description": "Play the specified track or search for a close match."
+  },
+  {
+    "name": "prev",
+    "category": "audio",
+    "description": "Skip to the start of the previously played track."
+  },
+  {
+    "name": "queue",
+    "category": "audio",
+    "description": "List the songs in the queue."
+  },
+  {
+    "name": "repeat",
+    "category": "audio",
+    "description": "Toggle repeating the current song."
+  },
+  {
+    "name": "search",
+    "category": "audio",
+    "description": "Search for a song."
+  },
+  {
+    "name": "seek",
+    "arguments": ["time"],
+    "category": "audio",
+    "description": "Seek ahead or behind on a track by seconds or to a specific time."
+  },
+  {
+    "name": "shuffle",
+    "category": "audio",
+    "description": "Toggle shuffling the queue."
+  },
+  {
+    "name": "skip",
+    "category": "audio",
+    "description": "Skip to the next song in the queue."
+  },
+  {
+    "name": "stop",
+    "category": "audio",
+    "description": "Stop playback and clear the queue."
+  },
+  {
+    "name": "volume",
+    "arguments": ["str"],
+    "category": "audio",
+    "description": "Set the volume for audio."
+  },
+  {
+    "name": "setlinkquoter enabled",
+    "arguments": ["true/false"],
+    "category": "tools",
+    "description": "Disabling this will make grief stop attempting to quote any message link that is sent in this server.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "setlinkquoter crossserver",
+    "arguments": ["true/false"],
+    "category": "tools",
+    "description": "Disabling this will make grief stop attempting to quote any message link that is sent in other servers shared by grief.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "setlinkquoter deletemessage",
+    "arguments": ["true/false"],
+    "category": "tools",
+    "description": "Disabling this will make grief stop attempting to delete any message link that is sent by grief.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "setlinkquoter webhooks",
+    "arguments": ["true/false"],
+    "category": "tools",
+    "description": "Enabling this will make grief stop attempting to send any message link by webhook.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "setlinkquoter showsettings",
+    "category": "tools",
+    "description": "Shows the current linkquoter settings.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "setlinkquoter whitelist",
+    "arguments": ["channel"],
+    "category": "tools",
+    "description": "Whitelist/unwhitelist a channel from being affected by linkquoter.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "nitrorole addmessage",
+    "arguments": ["message"],
+    "category": "tools",
+    "description": "Add new booster message. Leave blank for variables.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "nitrorole autoassignrole",
+    "arguments": ["role"],
+    "category": "tools",
+    "description": "Set a role that will be autoassigned after someone boosts server.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "nitrorole channel",
+    "arguments": ["channel"],
+    "category": "tools",
+    "description": "Set channel for new booster messages. Leave empty to disable.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "nitrorole listmessages",
+    "category": "tools",
+    "description": "List booster message templates.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "nitrorole removemessage",
+    "arguments": ["index"],
+    "category": "tools",
+    "description": "Remove new booster message.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "nitrorole unassignonboostend",
+    "arguments": ["true/false"],
+    "category": "tools",
+    "description": "Set if booster role should be unassigned when someone stops boosting server.",
+    "permission": "manage roles"
+  },
+  {
+    "name": "suggestset anonymous",
+    "category": "suggestions",
+    "description": "Toggle whether server suggestions are anonymous.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "suggestset approved",
+    "arguments": ["channel"],
+    "category": "suggestions",
+    "description": "Set the channel for approved suggestions.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "suggestset autodelete",
+    "category": "suggestions",
+    "description": "Toggle whether after the suggest command, the bot deletes the command message.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "suggestset channel",
+    "category": "suggestions",
+    "description": "Set the channel for suggestions.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "suggestset delete",
+    "category": "suggestions",
+    "description": "Toggle whether suggestions in the original suggestion channel get deleted after being approved/rejected.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "suggestset rejected",
+    "category": "suggestions",
+    "description": "Set the channel for rejected suggestions.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "suggestset same",
+    "arguments": ["true/false"],
+    "category": "suggestions",
+    "description": "Set whether to use the same channel for new and finished suggestions.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "suggestset settings",
+    "category": "suggestions",
+    "description": "See the settings for suggestions.",
+    "permission": "manage guild"
+  },
+  {
+    "name": "suggest",
+    "arguments": ["suggestion"],
+    "category": "suggestions",
+    "description": "Submit a suggestion."
+  },
+  {
+    "name": "approve",
+    "arguments": ["id"],
+    "category": "suggestions",
+    "description": "Approve a suggestion.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "reject",
+    "arguments": ["id"],
+    "category": "suggestions",
+    "description": "Reject a suggestion.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "addreason",
+    "arguments": ["id"],
+    "category": "suggestions",
+    "description": "Add a reason to a rejected suggestion.",
+    "permission": "manage messages"
+  },
+  {
+    "name": "showsuggestion",
+    "arguments": ["id"],
+    "category": "suggestions",
+    "description": "Show a suggestion.",
+    "permission": "manage messages"
   }
 ]
