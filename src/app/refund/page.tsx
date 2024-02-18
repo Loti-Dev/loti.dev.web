@@ -61,7 +61,7 @@ export default function Refund() {
                 <h1>Contact Us</h1>
                 <p>
                     If you believe your situation is viable for a refund you may wish to contact us
-                    via our email address support@loti.dev
+                    via our email address support@resent.dev
                 </p>
             </div>
         </section>

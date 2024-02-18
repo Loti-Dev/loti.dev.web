@@ -9,9 +9,9 @@ import NextAuthProvider from "@/app/context/NextAuthProvider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-    title: "Loti",
+    title: "resent",
     description:
-        "Loti is a versatile bot, offering features like moderation, social commands, and much more, making it perfect for all your server needs."
+        "resent is a versatile bot, offering features like moderation, social commands, and much more, making it perfect for all your server needs."
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

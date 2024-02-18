@@ -11,25 +11,25 @@ export default function Privacy() {
                 <h1>AGREEMENT TO OUR LEGAL TERMS</h1>
 
                 <p>
-                    We are loti.dev LLC, doing business as loti.dev ("Company," "we," "us," "our"),
+                    We are resent.dev LLC, doing business as resent.dev ("Company," "we," "us," "our"),
                     a company registered in Colorado, United States at 520 Zerex St, Unit 443,
                     Fraser, CO 80442.
                 </p>
 
                 <p>
-                    We operate the website https://loti.dev (the "Site"), as well as any other
+                    We operate the website https://resent.dev (the "Site"), as well as any other
                     related products and services that refer or link to these legal terms (the
                     "Legal Terms") (collectively, the "Services").
                 </p>
 
                 <p>
-                    You can contact us by email at privacy@loti.dev or by mail to 520 Zerex St, Unit
+                    You can contact us by email at privacy@resent.dev or by mail to 520 Zerex St, Unit
                     443, Fraser, CO 80442, United States.
                 </p>
 
                 <p>
                     These Legal Terms constitute a legally binding agreement made between you,
-                    whether personally or on behalf of an entity (&quot;you&quot;), and loti.dev
+                    whether personally or on behalf of an entity (&quot;you&quot;), and resent.dev
                     LLC, concerning your access to and use of the Services. You agree that by
                     accessing the Services, you have read, understood, and agreed to be bound by all
                     of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN
@@ -154,7 +154,7 @@ export default function Privacy() {
                 <p>
                     If you wish to make any use of the Services, Content, or Marks other than as set
                     out in this section or elsewhere in our Legal Terms, please address your request
-                    to: privacy@loti.dev. If we ever grant you the permission to post, reproduce, or
+                    to: privacy@resent.dev. If we ever grant you the permission to post, reproduce, or
                     publicly display any part of our Services or Content, you must identify us as
                     the owners or licensors of the Services, Content, or Marks and ensure that any
                     copyright or proprietary notice appears or is visible on posting, reproducing,
@@ -561,7 +561,7 @@ export default function Privacy() {
 
                 <p>
                     We care about data privacy and security. Please review our Privacy Policy:
-                    https://loti.dev/privacy. By using the Services, you agree to be bound by our
+                    https://resent.dev/privacy. By using the Services, you agree to be bound by our
                     Privacy Policy, which is incorporated into these Legal Terms. Please be advised
                     the Services are hosted in the United States. If you access the Services from
                     any other region of the world with laws or other requirements governing personal
@@ -865,8 +865,8 @@ export default function Privacy() {
                 </p>
 
                 <p>
-                    loti.dev LLC 520 Zerex St Unit 443 Fraser, CO 80442 United States
-                    privacy@loti.dev
+                    resent.dev LLC 520 Zerex St Unit 443 Fraser, CO 80442 United States
+                    privacy@resent.dev
                 </p>
             </div>
         </section>
